@@ -1,0 +1,719 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clínica 4 Trevos - Odontologia Especializada em Barueri</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            50: '#f0fdf4',
+                            100: '#dcfce7',
+                            200: '#bbf7d0',
+                            500: '#116B47',
+                            600: '#0e583a',
+                            700: '#0a422c',
+                            gold: '#CFA847'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&family=Poppins:wght@300;400;500;600;700&display=swap');
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+        h1, h2, h3, .font-heading {
+            font-family: 'Montserrat', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 antialiased selection:bg-brand-500 selection:text-white">
+
+    <!-- TOP BAR -->
+    <div class="bg-brand-700 text-white text-xs py-2 px-4 shadow-inner">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-2">
+            <div class="flex items-center gap-6">
+                <span class="flex items-center gap-1.5"><i data-lucide="map-pin" class="w-3.5 h-3.5 text-brand-gold"></i> Travessa Celidônio Guerra, 15 - Barueri, SP</span>
+                <span class="hidden sm:flex items-center gap-1.5"><i data-lucide="clock" class="w-3.5 h-3.5 text-brand-gold"></i> Seg a Sex: 08h às 18h | Sáb: 08h às 12h</span>
+            </div>
+            <div class="flex items-center gap-4">
+                <a href="https://api.whatsapp.com/send?phone=5511963975005" target="_blank" class="flex items-center gap-1 hover:text-brand-gold transition-colors">
+                    <i data-lucide="phone" class="w-3.5 h-3.5 text-brand-gold"></i> (11) 96397-5005
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- HEADER / NAVIGATION -->
+    <header class="sticky top-0 z-40 bg-white/95 backdrop-blur-md shadow-sm border-b border-slate-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <!-- LOGO VETORIAL / ILUSTRAÇÃO FIDELÍSSIMA -->
+                <a href="#" class="flex items-center gap-3 group">
+                    <div class="flex items-center gap-3 bg-slate-50 p-2 rounded-xl border border-slate-100">
+                        <svg viewBox="0 0 200 200" class="h-12 w-12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <!-- Pétalas / Dentes Trevo -->
+                            <path d="M100 90C85 65 60 65 50 80C40 95 55 115 80 105C88 102 96 95 100 90Z" fill="#71A088" />
+                            <path d="M110 100C135 85 135 60 120 50C105 40 85 55 95 80C98 88 105 96 110 100Z" fill="#116B47" />
+                            <path d="M100 110C115 135 140 135 150 120C160 105 145 85 120 95C112 98 104 105 100 110Z" fill="#116B47" />
+                            <path d="M90 100C65 115 65 140 80 150C95 160 115 145 105 120C102 112 95 104 90 100Z" fill="#71A088" />
+                            <!-- Detalhes Dourados -->
+                            <path d="M62 65 C 55 55, 45 60, 48 72" stroke="#CFA847" stroke-width="4" stroke-linecap="round"/>
+                            <path d="M135 62 C 145 55, 140 45, 128 48" stroke="#CFA847" stroke-width="4" stroke-linecap="round"/>
+                            <path d="M138 135 C 145 145, 155 140, 152 128" stroke="#CFA847" stroke-width="4" stroke-linecap="round"/>
+                            <path d="M65 138 C 55 145, 60 155, 72 152" stroke="#CFA847" stroke-width="4" stroke-linecap="round"/>
+                        </svg>
+                        <div class="flex flex-col">
+                            <span class="font-extrabold text-lg leading-none tracking-tight text-brand-700">CLÍNICA</span>
+                            <span class="font-black text-xl leading-none tracking-wider text-brand-500">4 TREVOS</span>
+                            <span class="text-[9px] font-bold text-slate-500 tracking-widest mt-0.5">SAÚDE • BEM-ESTAR • SORTE</span>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- DESKTOP MENU -->
+                <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-slate-700">
+                    <a href="#home" class="hover:text-brand-500 transition-colors">Início</a>
+                    <a href="#tratamentos" class="hover:text-brand-500 transition-colors">Tratamentos</a>
+                    <a href="#convenios" class="hover:text-brand-500 transition-colors">Convênios</a>
+                    <a href="#dicas" class="hover:text-brand-500 transition-colors">Dicas</a>
+                    <a href="#sobre" class="hover:text-brand-500 transition-colors">A Clínica</a>
+                    <a href="#contato" class="hover:text-brand-500 transition-colors">Contato</a>
+                </nav>
+
+                <!-- CTA BUTTON -->
+                <div class="hidden md:flex items-center">
+                    <a href="#agendamento" class="bg-brand-500 hover:bg-brand-600 text-white px-5 py-2.5 rounded-full font-medium text-sm shadow-md hover:shadow-lg transition-all transform hover:-translate-y-0.5 flex items-center gap-2">
+                        <i data-lucide="calendar" class="w-4 h-4"></i> Pré-Agendar Consulta
+                    </a>
+                </div>
+
+                <!-- MOBILE MENU BUTTON -->
+                <button id="mobile-menu-btn" class="md:hidden p-2 rounded-lg text-slate-600 hover:text-brand-500 hover:bg-slate-100 focus:outline-none">
+                    <i data-lucide="menu" class="w-6 h-6"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- MOBILE MENU DROPDOWN -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-b border-slate-200 px-4 pt-2 pb-6 space-y-3">
+            <a href="#home" class="block py-2 text-slate-700 font-medium hover:text-brand-500">Início</a>
+            <a href="#tratamentos" class="block py-2 text-slate-700 font-medium hover:text-brand-500">Tratamentos</a>
+            <a href="#convenios" class="block py-2 text-slate-700 font-medium hover:text-brand-500">Convênios</a>
+            <a href="#dicas" class="block py-2 text-slate-700 font-medium hover:text-brand-500">Dicas</a>
+            <a href="#sobre" class="block py-2 text-slate-700 font-medium hover:text-brand-500">A Clínica</a>
+            <a href="#contato" class="block py-2 text-slate-700 font-medium hover:text-brand-500">Contato</a>
+            <a href="#agendamento" class="w-full mt-2 bg-brand-500 text-white text-center py-3 rounded-lg font-medium flex justify-center items-center gap-2">
+                <i data-lucide="calendar" class="w-4 h-4"></i> Pré-Agendar Consulta
+            </a>
+        </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section id="home" class="relative bg-gradient-to-b from-brand-50/50 via-white to-slate-50 py-16 lg:py-24 overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-12 gap-12 items-center">
+                
+                <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+                    <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-brand-100 text-brand-700 text-xs font-semibold tracking-wide uppercase">
+                        <i data-lucide="sparkles" class="w-4 h-4 text-brand-gold"></i>
+                        Excelência em Saúde Bucal em Barueri
+                    </div>
+                    
+                    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-slate-900 tracking-tight leading-tight">
+                        Cuidar de você e do seu sorriso é a nossa <span class="text-brand-500 underline decoration-brand-gold/50 decoration-4">Sorte</span>.
+                    </h1>
+                    
+                    <p class="text-lg text-slate-600 max-w-2xl mx-auto lg:mx-0 leading-relaxed">
+                        Tratamentos odontológicos completos com tecnologia, conforto e atendimento humanizado para toda a sua família.
+                    </p>
+
+                    <div class="pt-2 flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+                        <a href="#agendamento" class="bg-brand-500 hover:bg-brand-600 text-white px-8 py-4 rounded-xl font-semibold text-base shadow-lg hover:shadow-brand-500/25 transition-all transform hover:-translate-y-0.5 flex items-center justify-center gap-3">
+                            <i data-lucide="calendar" class="w-5 h-5"></i>
+                            Pré-Agendar Avaliação
+                        </a>
+                        <a href="https://api.whatsapp.com/send?phone=5511963975005" target="_blank" class="bg-emerald-50 text-emerald-700 border border-emerald-200 hover:bg-emerald-100 px-8 py-4 rounded-xl font-semibold text-base transition-all flex items-center justify-center gap-3">
+                            <i data-lucide="message-circle" class="w-5 h-5 text-emerald-600"></i>
+                            Falar no WhatsApp
+                        </a>
+                    </div>
+
+                    <!-- BADGES -->
+                    <div class="pt-8 border-t border-slate-200/80 grid grid-cols-3 gap-4 text-center lg:text-left">
+                        <div>
+                            <p class="text-2xl font-bold text-slate-900">Amil Odonto</p>
+                            <p class="text-xs text-slate-500 font-medium">Convênio Aceito</p>
+                        </div>
+                        <div>
+                            <p class="text-2xl font-bold text-slate-900">Completo</p>
+                            <p class="text-xs text-slate-500 font-medium">Todos os Tratamentos</p>
+                        </div>
+                        <div>
+                            <p class="text-2xl font-bold text-slate-900">Barueri/SP</p>
+                            <p class="text-xs text-slate-500 font-medium">Fácil Acesso</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- HERO IMAGE CARD -->
+                <div class="lg:col-span-5 relative">
+                    <div class="relative mx-auto max-w-md lg:max-w-none">
+                        <div class="absolute -inset-2 rounded-3xl bg-gradient-to-r from-brand-500 to-brand-gold opacity-20 blur-xl"></div>
+                        <div class="relative bg-white p-4 rounded-3xl shadow-xl border border-slate-100">
+                            <img src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&q=80&w=800" alt="Atendimento Odontológico" class="w-full h-[400px] object-cover rounded-2xl">
+                            
+                            <div class="absolute bottom-8 left-8 right-8 bg-white/90 backdrop-blur-md p-4 rounded-xl shadow-lg border border-slate-100 flex items-center gap-4">
+                                <div class="bg-brand-500 p-3 rounded-lg text-white">
+                                    <i data-lucide="heart-handshake" class="w-6 h-6"></i>
+                                </div>
+                                <div>
+                                    <p class="font-bold text-slate-900 text-sm">Atendimento Humanizado</p>
+                                    <p class="text-xs text-slate-600">Sua saúde bucal em primeiro lugar</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- TRATAMENTOS SECTION -->
+    <section id="tratamentos" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto space-y-4">
+                <h2 class="text-xs font-bold uppercase tracking-widest text-brand-500">Nossas Especialidades</h2>
+                <p class="text-3xl sm:text-4xl font-extrabold text-slate-900">Tratamentos completos para o seu sorriso</p>
+                <p class="text-slate-600">Contamos com profissionais qualificados e infraestrutura moderna para oferecer o melhor cuidado bucal.</p>
+            </div>
+
+            <div class="mt-16 grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <!-- CARD 1 -->
+                <div class="bg-slate-50 p-8 rounded-2xl border border-slate-100 hover:shadow-xl hover:border-brand-200 transition-all group">
+                    <div class="w-12 h-12 bg-brand-100 text-brand-600 rounded-xl flex items-center justify-center mb-6 group-hover:bg-brand-500 group-hover:text-white transition-colors">
+                        <i data-lucide="shield-check" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-3">Próteses Dentárias</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed mb-4">Reabilitação oral completa com Prótese Total, Parcial e Flexível. Devolva a mastigação e estética ao seu sorriso.</p>
+                    <span class="text-xs font-semibold text-brand-600 bg-brand-50 px-2.5 py-1 rounded">Total / Parcial / Flex</span>
+                </div>
+
+                <!-- CARD 2 -->
+                <div class="bg-slate-50 p-8 rounded-2xl border border-slate-100 hover:shadow-xl hover:border-brand-200 transition-all group">
+                    <div class="w-12 h-12 bg-brand-100 text-brand-600 rounded-xl flex items-center justify-center mb-6 group-hover:bg-brand-500 group-hover:text-white transition-colors">
+                        <i data-lucide="sparkle" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-3">Implantes Dentários</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed mb-4">Solução definitiva e segura para a substituição de dentes perdidos, recuperando a firmeza e naturalidade.</p>
+                    <span class="text-xs font-semibold text-brand-600 bg-brand-50 px-2.5 py-1 rounded">Alta Tecnologia</span>
+                </div>
+
+                <!-- CARD 3 -->
+                <div class="bg-slate-50 p-8 rounded-2xl border border-slate-100 hover:shadow-xl hover:border-brand-200 transition-all group">
+                    <div class="w-12 h-12 bg-brand-100 text-brand-600 rounded-xl flex items-center justify-center mb-6 group-hover:bg-brand-500 group-hover:text-white transition-colors">
+                        <i data-lucide="activity" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-3">Tratamento de Canal (Endodontia)</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed mb-4">Tratamento rápido, seguro e sem dor para salvar dentes comprometidos por cáries profundas ou infecções.</p>
+                    <span class="text-xs font-semibold text-brand-600 bg-brand-50 px-2.5 py-1 rounded">Atendimento Amil</span>
+                </div>
+
+                <!-- CARD 4 -->
+                <div class="bg-slate-50 p-8 rounded-2xl border border-slate-100 hover:shadow-xl hover:border-brand-200 transition-all group">
+                    <div class="w-12 h-12 bg-brand-100 text-brand-600 rounded-xl flex items-center justify-center mb-6 group-hover:bg-brand-500 group-hover:text-white transition-colors">
+                        <i data-lucide="smile" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-3">Ortodontia & Aparelhos</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed mb-4">Aparelhos estéticos, convencionais e invisíveis para alinhar seus dentes e corrigir a mordida de forma eficiente.</p>
+                    <span class="text-xs font-semibold text-brand-600 bg-brand-50 px-2.5 py-1 rounded">Alinhadores e Convencional</span>
+                </div>
+
+                <!-- CARD 5 -->
+                <div class="bg-slate-50 p-8 rounded-2xl border border-slate-100 hover:shadow-xl hover:border-brand-200 transition-all group">
+                    <div class="w-12 h-12 bg-brand-100 text-brand-600 rounded-xl flex items-center justify-center mb-6 group-hover:bg-brand-500 group-hover:text-white transition-colors">
+                        <i data-lucide="sun" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-3">Clareamento & Estética</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed mb-4">Transforme a cor e o brilho dos seus dentes com técnicas modernas de clareamento e restaurações estéticas.</p>
+                    <span class="text-xs font-semibold text-brand-600 bg-brand-50 px-2.5 py-1 rounded">Estética Oral</span>
+                </div>
+
+                <!-- CARD 6 -->
+                <div class="bg-slate-50 p-8 rounded-2xl border border-slate-100 hover:shadow-xl hover:border-brand-200 transition-all group">
+                    <div class="w-12 h-12 bg-brand-100 text-brand-600 rounded-xl flex items-center justify-center mb-6 group-hover:bg-brand-500 group-hover:text-white transition-colors">
+                        <i data-lucide="user-check" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-3">Clínica Geral & Preventiva</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed mb-4">Limpeza profunda, profilaxia, restaurações, raspagem e acompanhamento regular para manter sua saúde em dia.</p>
+                    <span class="text-xs font-semibold text-brand-600 bg-brand-50 px-2.5 py-1 rounded">Prevenção Contínua</span>
+                </div>
+
+                <!-- CARD 7 -->
+                <div class="bg-slate-50 p-8 rounded-2xl border border-slate-100 hover:shadow-xl hover:border-brand-200 transition-all group">
+                    <div class="w-12 h-12 bg-brand-100 text-brand-600 rounded-xl flex items-center justify-center mb-6 group-hover:bg-brand-500 group-hover:text-white transition-colors">
+                        <i data-lucide="baby" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-3">Odontopediatria</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed mb-4">Cuidado especial, lúdico e carinhoso para a higiene bucal e desenvolvimento dos dentes das crianças.</p>
+                    <span class="text-xs font-semibold text-brand-600 bg-brand-50 px-2.5 py-1 rounded">Saúde Infantil</span>
+                </div>
+
+                <!-- CARD 8 -->
+                <div class="bg-slate-50 p-8 rounded-2xl border border-slate-100 hover:shadow-xl hover:border-brand-200 transition-all group">
+                    <div class="w-12 h-12 bg-brand-100 text-brand-600 rounded-xl flex items-center justify-center mb-6 group-hover:bg-brand-500 group-hover:text-white transition-colors">
+                        <i data-lucide="zap" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-3">DTM & Dores Ociais</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed mb-4">Tratamento de bruxismo, placas de mordida e alívio de dores na articulação temporomandibular.</p>
+                    <span class="text-xs font-semibold text-brand-600 bg-brand-50 px-2.5 py-1 rounded">Placa de Bruxismo</span>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- CONVÊNIOS SECTION -->
+    <section id="convenios" class="py-16 bg-slate-100 border-y border-slate-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-white p-8 sm:p-12 rounded-3xl shadow-sm border border-slate-200 flex flex-col md:flex-row items-center justify-between gap-8">
+                <div class="space-y-3 text-center md:text-left">
+                    <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-blue-50 text-blue-700 text-xs font-bold">
+                        <i data-lucide="check-circle-2" class="w-4 h-4"></i> Atendimento por Convênio & Particular
+                    </div>
+                    <h3 class="text-2xl sm:text-3xl font-bold text-slate-900">Aceitamos Conveniados Amil e Outros Planos</h3>
+                    <p class="text-slate-600 max-w-xl text-sm sm:text-base">
+                        Realizamos procedimentos através do convênio <strong>Amil Odonto</strong> (incluindo tratamento endodôntico/canal). Caso seu plano seja outro, consulte nossa equipe no agendamento!
+                    </p>
+                </div>
+                <div class="flex flex-col sm:flex-row gap-4 w-full md:w-auto">
+                    <div class="bg-blue-600 text-white font-bold px-6 py-4 rounded-xl text-center shadow-md flex items-center justify-center gap-2">
+                        <i data-lucide="badge-check" class="w-5 h-5"></i> AMIL ODONTO
+                    </div>
+                    <a href="#agendamento" class="bg-brand-500 hover:bg-brand-600 text-white font-semibold px-6 py-4 rounded-xl text-center transition-all">
+                        Consultar Outros Convênios
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- DICAS & CUIDADOS SECTION -->
+    <section id="dicas" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto space-y-4 mb-16">
+                <h2 class="text-xs font-bold uppercase tracking-widest text-brand-500">Dicas da Clínica</h2>
+                <p class="text-3xl font-extrabold text-slate-900">Cuidados para um Sorriso Saudável</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-brand-50/50 p-6 rounded-2xl border border-brand-100">
+                    <div class="text-brand-gold font-bold text-lg mb-2">01. Escovação Suave</div>
+                    <h4 class="font-bold text-slate-900 mb-2">Escolha a Escova Correta</h4>
+                    <p class="text-sm text-slate-600 leading-relaxed">Prefira escovas de cerdas macias ou ultramacias. A força excessiva pode desgastar o esmalte dos dentes e retragredir a gengiva.</p>
+                </div>
+
+                <div class="bg-brand-50/50 p-6 rounded-2xl border border-brand-100">
+                    <div class="text-brand-gold font-bold text-lg mb-2">02. Prevenção</div>
+                    <h4 class="font-bold text-slate-900 mb-2">Fio Dental Diário</h4>
+                    <p class="text-sm text-slate-600 leading-relaxed">O fio dental remove placas onde a escova não alcança, prevenindo o tártaro, cáries interdentais e inflamações gengivais.</p>
+                </div>
+
+                <div class="bg-brand-50/50 p-6 rounded-2xl border border-brand-100">
+                    <div class="text-brand-gold font-bold text-lg mb-2">03. Acompanhamento</div>
+                    <h4 class="font-bold text-slate-900 mb-2">Visitas Regulares</h4>
+                    <p class="text-sm text-slate-600 leading-relaxed">Consulte o dentista a cada 6 meses para avaliações e limpezas preventivas. A prevenção é o seu melhor investimento.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PRÉ-AGENDAMENTO FORM SECTION -->
+    <section id="agendamento" class="py-20 bg-brand-700 text-white relative overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid lg:grid-cols-12 gap-12 items-center">
+                
+                <div class="lg:col-span-5 space-y-6">
+                    <span class="text-brand-gold font-bold text-xs uppercase tracking-widest">Pré-Agendamento Rápido</span>
+                    <h2 class="text-3xl sm:text-4xl font-extrabold leading-tight">Agende sua Avaliação Odontológica</h2>
+                    <p class="text-brand-100 text-sm leading-relaxed">
+                        Preencha o formulário com o turno da sua preferência (Manhã ou Tarde). Nossa equipe entrará em contato para confirmar o dia e horário exato da sua consulta.
+                    </p>
+
+                    <div class="space-y-4 pt-4">
+                        <div class="flex items-start gap-4">
+                            <div class="bg-brand-600 p-2.5 rounded-lg text-brand-gold">
+                                <i data-lucide="check-circle" class="w-5 h-5"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-sm">Sem Compromisso</h4>
+                                <p class="text-xs text-brand-200">Enviaremos os horários vagos no turno escolhido.</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4">
+                            <div class="bg-brand-600 p-2.5 rounded-lg text-brand-gold">
+                                <i data-lucide="message-square" class="w-5 h-5"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-sm">Confirmação via WhatsApp</h4>
+                                <p class="text-xs text-brand-200">Receba o retorno diretamente no seu celular.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FORM CARD -->
+                <div class="lg:col-span-7 bg-white text-slate-800 p-8 sm:p-10 rounded-3xl shadow-2xl">
+                    <form id="agendamento-form" class="space-y-5">
+                        
+                        <div>
+                            <label class="block text-xs font-bold text-slate-700 uppercase mb-1">Nome Completo *</label>
+                            <input type="text" id="form-nome" required placeholder="Digite seu nome completo" class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-brand-500 focus:border-brand-500 outline-none transition-all text-sm">
+                        </div>
+
+                        <div class="grid sm:grid-cols-2 gap-5">
+                            <div>
+                                <label class="block text-xs font-bold text-slate-700 uppercase mb-1">Telefone / WhatsApp *</label>
+                                <input type="tel" id="form-telefone" required placeholder="(11) 99999-9999" class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-brand-500 focus:border-brand-500 outline-none transition-all text-sm">
+                            </div>
+
+                            <div>
+                                <label class="block text-xs font-bold text-slate-700 uppercase mb-1">Turno Desejado *</label>
+                                <select id="form-turno" required class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-brand-500 focus:border-brand-500 outline-none transition-all text-sm bg-white">
+                                    <option value="" disabled selected>Selecione o turno</option>
+                                    <option value="Manhã">Manhã (08h às 12h)</option>
+                                    <option value="Tarde">Tarde (12h às 18h)</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="grid sm:grid-cols-2 gap-5">
+                            <div>
+                                <label class="block text-xs font-bold text-slate-700 uppercase mb-1">Tratamento de Interesse *</label>
+                                <select id="form-servico" required class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-brand-500 focus:border-brand-500 outline-none transition-all text-sm bg-white">
+                                    <option value="" disabled selected>Selecione um serviço</option>
+                                    <option value="Avaliação Geral / Limpeza">Avaliação Geral / Limpeza</option>
+                                    <option value="Tratamento de Canal (Endodontia)">Tratamento de Canal (Endodontia)</option>
+                                    <option value="Prótese Total / Parcial / Flex">Prótese Total / Parcial / Flex</option>
+                                    <option value="Implantes Dentários">Implantes Dentários</option>
+                                    <option value="Ortodontia / Aparelho">Ortodontia / Aparelho</option>
+                                    <option value="Clareamento Dental">Clareamento Dental</option>
+                                    <option value="Odontopediatria">Odontopediatria (Infantil)</option>
+                                    <option value="Placa de Bruxismo / DTM">Placa de Bruxismo / DTM</option>
+                                    <option value="Outro Tratamento">Outro Tratamento</option>
+                                </select>
+                            </div>
+
+                            <div>
+                                <label class="block text-xs font-bold text-slate-700 uppercase mb-1">Forma de Atendimento *</label>
+                                <select id="form-convenio" required class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-brand-500 focus:border-brand-500 outline-none transition-all text-sm bg-white">
+                                    <option value="Particular">Particular</option>
+                                    <option value="Convênio Amil">Convênio Amil Odonto</option>
+                                    <option value="Outros Convênios">Outros Convênios (Consultar)</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div>
+                            <label class="block text-xs font-bold text-slate-700 uppercase mb-1">Observações (Opcional)</label>
+                            <textarea id="form-obs" rows="2" placeholder="Deseja relatar algum sintoma ou dúvida?" class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-brand-500 focus:border-brand-500 outline-none transition-all text-sm"></textarea>
+                        </div>
+
+                        <!-- AVISO DE CONFIRMAÇÃO POSTERIOR -->
+                        <div class="bg-amber-50 border border-amber-200 p-3 rounded-xl flex items-start gap-2.5 text-amber-800 text-xs">
+                            <i data-lucide="info" class="w-4 h-4 text-amber-600 shrink-0 mt-0.5"></i>
+                            <span><strong>Nota:</strong> A data e o horário exato da sua consulta serão confirmados por nossa atendente após o recebimento da solicitação.</span>
+                        </div>
+
+                        <button type="submit" class="w-full bg-brand-500 hover:bg-brand-600 text-white py-4 rounded-xl font-bold text-base shadow-lg hover:shadow-brand-500/30 transition-all flex items-center justify-center gap-2">
+                            <i data-lucide="send" class="w-5 h-5"></i>
+                            Enviar Solicitação pelo WhatsApp
+                        </button>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- SOBRE NÓS -->
+    <section id="sobre" class="py-20 bg-slate-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div class="space-y-6">
+                    <span class="text-xs font-bold uppercase tracking-widest text-brand-500">Conheça a Clínica</span>
+                    <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900">Tradição, Cuidado e Confiança em Barueri</h2>
+                    <p class="text-slate-600 leading-relaxed">
+                        A <strong>Clínica 4 Trevos</strong> foi idealizada com o propósito de levar saúde bucal acessível e de excelência a todos os nossos pacientes.
+                    </p>
+                    <p class="text-slate-600 leading-relaxed">
+                        Nossa equipe altamente especializada trabalha com o compromisso de devolver a autoestima e o bem-estar através de sorrisos bonitos e saudáveis.
+                    </p>
+                    
+                    <div class="grid grid-cols-2 gap-4 pt-4">
+                        <div class="border-l-4 border-brand-500 pl-4">
+                            <h4 class="font-bold text-slate-900">Atendimento Atencioso</h4>
+                            <p class="text-xs text-slate-500">Espaço confortável e acolhedor.</p>
+                        </div>
+                        <div class="border-l-4 border-brand-gold pl-4">
+                            <h4 class="font-bold text-slate-900">Facilidade de Acesso</h4>
+                            <p class="text-xs text-slate-500">Localização central em Barueri.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="relative">
+                    <!-- LOGO CARD -->
+                    <div class="bg-white p-8 rounded-3xl shadow-xl border border-slate-200 text-center space-y-6">
+                        <div class="flex justify-center items-center gap-3">
+                            <svg viewBox="0 0 200 200" class="h-20 w-20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M100 90C85 65 60 65 50 80C40 95 55 115 80 105C88 102 96 95 100 90Z" fill="#71A088" />
+                                <path d="M110 100C135 85 135 60 120 50C105 40 85 55 95 80C98 88 105 96 110 100Z" fill="#116B47" />
+                                <path d="M100 110C115 135 140 135 150 120C160 105 145 85 120 95C112 98 104 105 100 110Z" fill="#116B47" />
+                                <path d="M90 100C65 115 65 140 80 150C95 160 115 145 105 120C102 112 95 104 90 100Z" fill="#71A088" />
+                                <path d="M62 65 C 55 55, 45 60, 48 72" stroke="#CFA847" stroke-width="4" stroke-linecap="round"/>
+                                <path d="M135 62 C 145 55, 140 45, 128 48" stroke="#CFA847" stroke-width="4" stroke-linecap="round"/>
+                                <path d="M138 135 C 145 145, 155 140, 152 128" stroke="#CFA847" stroke-width="4" stroke-linecap="round"/>
+                                <path d="M65 138 C 55 145, 60 155, 72 152" stroke="#CFA847" stroke-width="4" stroke-linecap="round"/>
+                            </svg>
+                        </div>
+                        <div class="pt-4 border-t border-slate-100">
+                            <p class="text-brand-500 font-bold text-xl">CLÍNICA 4 TREVOS</p>
+                            <p class="text-xs font-semibold text-slate-500 tracking-widest mt-1">SAÚDE • BEM-ESTAR • SORTE</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ SECTION -->
+    <section class="py-20 bg-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6">
+            <div class="text-center space-y-3 mb-12">
+                <h2 class="text-xs font-bold uppercase tracking-widest text-brand-500">Dúvidas Frequentes</h2>
+                <p class="text-3xl font-extrabold text-slate-900">Perguntas Comuns dos Pacientes</p>
+            </div>
+
+            <div class="space-y-4" id="faq-accordion">
+                <!-- FAQ 1 -->
+                <div class="border border-slate-200 rounded-xl overflow-hidden">
+                    <button class="faq-btn w-full px-6 py-4 text-left font-semibold text-slate-900 flex justify-between items-center bg-slate-50 hover:bg-slate-100">
+                        <span>Como funciona o pré-agendamento de consulta?</span>
+                        <i data-lucide="chevron-down" class="w-5 h-5 text-slate-500 transition-transform"></i>
+                    </button>
+                    <div class="faq-content hidden px-6 py-4 text-sm text-slate-600 bg-white border-t border-slate-200">
+                        Você seleciona o turno de sua preferência (Manhã ou Tarde) pelo site. Ao enviar, nossa recepcionista entrará em contato via WhatsApp com os dias e horários exatos disponíveis para confirmar sua consulta.
+                    </div>
+                </div>
+
+                <!-- FAQ 2 -->
+                <div class="border border-slate-200 rounded-xl overflow-hidden">
+                    <button class="faq-btn w-full px-6 py-4 text-left font-semibold text-slate-900 flex justify-between items-center bg-slate-50 hover:bg-slate-100">
+                        <span>Quais tratamentos são aceitos pelo convênio Amil?</span>
+                        <i data-lucide="chevron-down" class="w-5 h-5 text-slate-500 transition-transform"></i>
+                    </button>
+                    <div class="faq-content hidden px-6 py-4 text-sm text-slate-600 bg-white border-t border-slate-200">
+                        Atendemos o convênio Amil Odonto para tratamentos endodônticos (canal) e diversos outros procedimentos clínicos. Entre em contato para confirmar a cobertura do seu plano específico.
+                    </div>
+                </div>
+
+                <!-- FAQ 3 -->
+                <div class="border border-slate-200 rounded-xl overflow-hidden">
+                    <button class="faq-btn w-full px-6 py-4 text-left font-semibold text-slate-900 flex justify-between items-center bg-slate-50 hover:bg-slate-100">
+                        <span>Quais são as opções de próteses oferecidas?</span>
+                        <i data-lucide="chevron-down" class="w-5 h-5 text-slate-500 transition-transform"></i>
+                    </button>
+                    <div class="faq-content hidden px-6 py-4 text-sm text-slate-600 bg-white border-t border-slate-200">
+                        Trabalhamos com Prótese Total, Prótese Parcial Removível e Prótese Flexível, oferecendo maior conforto e estética de acordo com a necessidade de cada paciente.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- LOCALIZAÇÃO & CONTATO SECTION -->
+    <section id="contato" class="py-20 bg-slate-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-12 gap-12">
+                
+                <div class="lg:col-span-5 space-y-8">
+                    <div>
+                        <span class="text-xs font-bold uppercase tracking-widest text-brand-500">Localização & Contato</span>
+                        <h2 class="text-3xl font-extrabold text-slate-900 mt-1">Venha nos Visitar</h2>
+                        <p class="text-slate-600 text-sm mt-2">Estamos localizados no centro de Barueri com fácil acesso para você e sua família.</p>
+                    </div>
+
+                    <div class="space-y-6">
+                        <div class="flex items-start gap-4">
+                            <div class="bg-brand-100 p-3 rounded-xl text-brand-600">
+                                <i data-lucide="map-pin" class="w-6 h-6"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-slate-900">Endereço</h4>
+                                <p class="text-sm text-slate-600">Travessa Celidônio Guerra, 15</p>
+                                <p class="text-sm text-slate-600">Barueri, SP - CEP 06401-020</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4">
+                            <div class="bg-brand-100 p-3 rounded-xl text-brand-600">
+                                <i data-lucide="phone" class="w-6 h-6"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-slate-900">Telefone & WhatsApp</h4>
+                                <p class="text-sm text-slate-600">(11) 96397-5005</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4">
+                            <div class="bg-brand-100 p-3 rounded-xl text-brand-600">
+                                <i data-lucide="mail" class="w-6 h-6"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-slate-900">E-mail</h4>
+                                <p class="text-sm text-slate-600">clinica4trevos@outlook.com</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4">
+                            <div class="bg-brand-100 p-3 rounded-xl text-brand-600">
+                                <i data-lucide="clock" class="w-6 h-6"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-slate-900">Horário de Atendimento</h4>
+                                <p class="text-sm text-slate-600">Segunda a Sexta: 08:00 às 18:00</p>
+                                <p class="text-sm text-slate-600">Sábado: 08:00 às 12:00</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- MAPA GOOGLE MAPS -->
+                <div class="lg:col-span-7 h-[450px] bg-slate-200 rounded-3xl overflow-hidden shadow-lg border border-slate-200">
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3658.7842602713175!2d-46.8785!3d-23.5105!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94cf0371a5c68fbd%3A0x8e833fb3509072e5!2sTravessa%20Celid%C3%B4nio%20Guerra%2C%2015%20-%20Centro%2C%20Barueri%20-%20SP%2C%2006401-020!5e0!3m2!1spt-BR!2sbr!4v1700000000000!5m2!1spt-BR!2sbr" 
+                        width="100%" 
+                        height="100%" 
+                        style="border:0;" 
+                        allowfullscreen="" 
+                        loading="lazy" 
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-slate-900 text-slate-400 py-12 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-center gap-6 border-b border-slate-800 pb-8">
+                <!-- LOGO IN FOOTER -->
+                <div class="flex items-center gap-3 bg-white/5 p-3 rounded-xl border border-white/10">
+                    <svg viewBox="0 0 200 200" class="h-10 w-10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M100 90C85 65 60 65 50 80C40 95 55 115 80 105C88 102 96 95 100 90Z" fill="#71A088" />
+                        <path d="M110 100C135 85 135 60 120 50C105 40 85 55 95 80C98 88 105 96 110 100Z" fill="#10B981" />
+                        <path d="M100 110C115 135 140 135 150 120C160 105 145 85 120 95C112 98 104 105 100 110Z" fill="#10B981" />
+                        <path d="M90 100C65 115 65 140 80 150C95 160 115 145 105 120C102 112 95 104 90 100Z" fill="#71A088" />
+                        <path d="M62 65 C 55 55, 45 60, 48 72" stroke="#CFA847" stroke-width="4" stroke-linecap="round"/>
+                        <path d="M135 62 C 145 55, 140 45, 128 48" stroke="#CFA847" stroke-width="4" stroke-linecap="round"/>
+                        <path d="M138 135 C 145 145, 155 140, 152 128" stroke="#CFA847" stroke-width="4" stroke-linecap="round"/>
+                        <path d="M65 138 C 55 145, 60 155, 72 152" stroke="#CFA847" stroke-width="4" stroke-linecap="round"/>
+                    </svg>
+                    <div class="flex flex-col">
+                        <span class="font-extrabold text-white leading-none">CLÍNICA 4 TREVOS</span>
+                        <span class="text-[9px] text-brand-gold font-bold tracking-widest mt-0.5">SAÚDE • BEM-ESTAR • SORTE</span>
+                    </div>
+                </div>
+
+                <div class="flex gap-6 text-sm">
+                    <a href="#home" class="hover:text-white transition-colors">Início</a>
+                    <a href="#tratamentos" class="hover:text-white transition-colors">Tratamentos</a>
+                    <a href="#convenios" class="hover:text-white transition-colors">Convênios</a>
+                    <a href="#agendamento" class="hover:text-white transition-colors">Pré-Agendamento</a>
+                    <a href="#contato" class="hover:text-white transition-colors">Contato</a>
+                </div>
+            </div>
+
+            <div class="pt-8 text-center md:text-left flex flex-col md:flex-row justify-between items-center text-xs space-y-4 md:space-y-0">
+                <p>&copy; 2026 Clínica 4 Trevos. Todos os direitos reservados.</p>
+                <p>Travessa Celidônio Guerra, 15 - Barueri, SP | WhatsApp: (11) 96397-5005</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- BOTÃO FLUTUANTE WHATSAPP -->
+    <a href="https://api.whatsapp.com/send?phone=5511963975005&text=Ol%C3%A1!%20Gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o%20na%20Cl%C3%ADnica%204%20Trevos." target="_blank" class="fixed bottom-6 right-6 z-50 bg-emerald-500 text-white p-4 rounded-full shadow-2xl hover:bg-emerald-600 transition-all transform hover:scale-110 flex items-center justify-center group" title="Falar no WhatsApp">
+        <i data-lucide="message-circle" class="w-7 h-7"></i>
+        <span class="max-w-0 overflow-hidden whitespace-nowrap group-hover:max-w-xs group-hover:ml-2 transition-all duration-300 ease-in-out text-sm font-bold">Atendimento WhatsApp</span>
+    </a>
+
+    <!-- JAVASCRIPT -->
+    <script>
+        // Inicializar Ícones
+        lucide.createIcons();
+
+        // Menu Mobile Toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // FAQ Accordion
+        const faqButtons = document.querySelectorAll('.faq-btn');
+        faqButtons.forEach(btn => {
+            btn.addEventListener('click', () => {
+                const content = btn.nextElementSibling;
+                const icon = btn.querySelector('[data-lucide="chevron-down"]');
+                
+                content.classList.toggle('hidden');
+                if (icon) {
+                    icon.classList.toggle('rotate-180');
+                }
+            });
+        });
+
+        // Formulário para WhatsApp
+        document.getElementById('agendamento-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            const nome = document.getElementById('form-nome').value;
+            const telefone = document.getElementById('form-telefone').value;
+            const turno = document.getElementById('form-turno').value;
+            const servico = document.getElementById('form-servico').value;
+            const convenio = document.getElementById('form-convenio').value;
+            const obs = document.getElementById('form-obs').value;
+
+            let mensagem = `*SOLICITAÇÃO DE PRÉ-AGENDAMENTO - CLÍNICA 4 TREVOS*\n\n`;
+            mensagem += `👤 *Nome:* ${nome}\n`;
+            mensagem += `📞 *Telefone:* ${telefone}\n`;
+            mensagem += `☀️ *Turno Desejado:* ${turno}\n`;
+            mensagem += `🦷 *Tratamento:* ${servico}\n`;
+            mensagem += `💳 *Atendimento:* ${convenio}\n`;
+            if (obs) mensagem += `📝 *Observações:* ${obs}\n`;
+            mensagem += `\n*Nota:* Aguardo a confirmação da data e horário exato disponíveis!`;
+
+            const url = `https://api.whatsapp.com/send?phone=5511963975005&text=${encodeURIComponent(mensagem)}`;
+            window.open(url, '_blank');
+        });
+    </script>
+</body>
+</html>
